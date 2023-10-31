@@ -11,6 +11,7 @@ def Encoder(password):
 
     # return encoded password
     return encoded_pass
+#test
 
 
 def Decoder(password):
