@@ -1,5 +1,6 @@
 encoded_passwords= {}
-
+a = ""
+b =""
 #Kassahun Sanayew Encoder
 def Encoder(password):
     # string to store encoded password
@@ -11,10 +12,15 @@ def Encoder(password):
 
     # return encoded password
     return encoded_pass
-#test
 
-
-def Decoder(password):
+# Haya Shaikh Decoder Function
+def decode(password):
+    # decodes password inputted by the user of 8 digit length containing only integers
+    decoded = ""
+    if len(password) == 8:
+        for i in password:
+            decoded += str(int(i) - 3)
+        return decoded
 
 
 while True:
@@ -33,9 +39,10 @@ while True:
         encoded_passwords[encoded_pass]=password
         print("Your password has been encoded and stored")
 
-    elif option =='2':
-
-
+    elif option =='2': # Haya Shaikh decoder option
+        print(encoded_pass)
+        b = decode(encoded_pass)
+        print(f"The encoded password is {encoded_pass}, and the original password is {b}.")
 
     elif option == '3':
         print("Goodbye!")
